@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties (Design Tokens) ───────────────────── */
+:root {
+  --bg-base:        #141414;
+  --bg-black:       #000000;
+  --bg-card:        #181818;
+  --bg-card-2:      #232323;
+  --netflix-red:    #E50914;
+  --netflix-red-dk: #b20710;
+  --text-white:     #FFFFFF;
+  --text-body:      #E5E5E5;
+  --text-meta:      #AAAAAA;
+  --text-muted:     #757575;
+  --border-subtle:  rgba(255,255,255,0.10);
+}
+
+/* ─── Base ────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #141414;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Netflix Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: #000; }
+::-webkit-scrollbar-thumb  { background: #E50914; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #b20710; }
+* { scrollbar-width: thin; scrollbar-color: #E50914 #000; }
+
+/* ─── Hide horizontal scrollbar in carousels ─────────────────── */
+.scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scroll-hide::-webkit-scrollbar { display: none; }
+
+/* ─── Selection ───────────────────────────────────────────────── */
+::selection { background-color: rgba(229,9,20,0.35); color: #fff; }
+
+/* ─── Bebas Neue helper class ─────────────────────────────────── */
+.bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
